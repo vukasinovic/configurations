@@ -11,7 +11,7 @@ highlight Comment ctermfg=green
 
 " Installing Plugins
 call plug#begin()
-Plug 'preservim/NERDTree'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 " NerdTree Settings
