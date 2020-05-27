@@ -12,6 +12,8 @@ highlight Comment ctermfg=green
 " Installing Plugins
 call plug#begin()
 Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " NerdTree Settings
@@ -21,3 +23,8 @@ nmap ++ <plug>NERDCommenterToggle
 autocmd VimEnter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeWinPos = "left"
+
+" FZF Settings
+nmap <C-p> <Esc><Esc>:Files!<CR>
+inoremap <C-p> <Esc><Esc>:BLines!<CR>
+map <C-g> <Esc><Esc>:BCommits!<CR>
